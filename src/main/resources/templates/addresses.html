@@ -1,20 +1,33 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-	<title>Adresses</title>
-	<meta http-equiv ="Content-Type" content ="text/html;
-		charset=UTF-8"/>
-</head>
-<body>
+<!DOCTYPE html>
+<html>
 
-<div th:replace="fragments.html"></div>
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	    <title>Home - Brand</title>
+	    <link href="assets/bootstrap/css/bootstrap.min.css"
+	        rel="stylesheet">
+	</head>
+	<body>
+		<div th:replace="fragments.html"></div>
+		
 
-<h1>Les differentes adresses</h1>
-
-<ul th:each="address: ${allAddresses}">
-	<li th:text="${address.auteur}" />
-	<li th:text="${address.content}" />
-</ul>
-
-</body>
+	   <section class="testimonials text-center bg-light">
+	        <div class="container">
+	            <h2 class="mb-5">Les differentes adresses</h2>
+	            <div class="row">
+	                <div th:each="address: ${allAddresses}" class="col-lg-4">
+	                    <div  class="mx-auto testimonial-item mb-5 mb-lg-0"><img class="rounded-circle img-fluid mb-3" th:src="@{${address.image}}")>
+	                    	<h2 > </h2>
+	                        <h5 th:text="${address.auteur}"></h5>
+	                        <p class="font-weight-light mb-0"  th:text="${address.content}" ></p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+	    <div th:replace="footer.html"></div>
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	</body>
 </html>

@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
 
+	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   
+	    <title>Home - Brand</title>
+	    <link href="assets/bootstrap/css/bootstrap.min.css"
+	        rel="stylesheet">
+	</head>
+	
+	<body>
+	<div th:replace="fragments.html"></div>
+    <section class="features-icons bg-light text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-screen-desktop m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+                        <h3>Localisation</h3>
+                        <p class="lead mb-0" th:text ="${localisation}"></p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-layers m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+                        <h3>Adresse</h3>
+                        <p class="lead mb-0" th:text ="${adresse}"></p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="mx-auto features-icons-item mb-5 mb-lg-0 mb-lg-3">
+                        <div class="d-flex features-icons-icon"><i class="icon-check m-auto text-primary" data-bs-hover-animate="pulse"></i></div>
+                        <h3>Temperature</h3>
+                        <p class="lead mb-0" th:text ="${meteo}"></p><p>degres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div th:replace="footer.html"></div>
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
